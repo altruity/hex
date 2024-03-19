@@ -84,3 +84,21 @@ export async function getAllPages(isDraftMode: boolean): Promise<any[]> {
 
   return extractPageEntries(entries);
 }
+
+function extractPage(fetchResponse: any): any {
+  return fetchResponse?.data?.pageCollection?.items?.[0];
+}
+
+export async function getPreviewPageBySlug(slug: string | null): Promise<any> {
+  const entry = await fetchGraphQL(
+    `query {
+      pageCollection(where: { slug: "${slug}" }, preview: true, limit: 1) {
+        items {
+          ${PAGE_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    true,
+  );
+  return extractPage(entry);
+}

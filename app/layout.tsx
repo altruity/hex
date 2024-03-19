@@ -1,7 +1,8 @@
-import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import ThemeRegistry from '@/_theme/ThemeRegistry';
 import { inter, mono } from '@/_lib/constants';
+import './globals.css';
 
 export const metadata = {
   title: 'Community | Hex',
@@ -20,6 +21,7 @@ export default function RootLayout({
           <section className="min-h-screen">
             <main>{children}</main>
           </section>
+          <Analytics />
         </body>
       </html>
     </ThemeRegistry>
