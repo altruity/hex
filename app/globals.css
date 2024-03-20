@@ -25,8 +25,8 @@ body {
 
 [id*='headlessui-combobox-options'] {
   padding: 8px 0;
-  border-top-width: 0.5px;
-  border-color: #F5C0C0;
+  border-top-width: 0.5px !important;
+  border-color: #F5C0C0 !important;
 }
 
 [id*='headlessui-combobox-options'] li [class*='icon-size'] {
@@ -43,10 +43,9 @@ body {
 [id*='headlessui-dialog'] > div:last-child {
   position: relative;
   padding: 12px;
-  border: 1px solid pink;
+  border: 1px solid #F5C0C0;
   overflow: visible;
   border-color: rgba(245, 192, 192, 0.3);
-  /* background-color: rgba(245, 192, 192, 0.1); */
   background-color: #1b162b;
   transition: border 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) 0s, background-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
 }
