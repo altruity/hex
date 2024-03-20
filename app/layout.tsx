@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import 'superkey/styles.css';
 
 import ThemeRegistry from '@/_theme/ThemeRegistry';
 import { inter, mono } from '@/_lib/constants';
@@ -18,9 +19,7 @@ export default function RootLayout({
     <ThemeRegistry options={{ key: 'mui' }}>
       <html lang="en" className={inter.variable}>
         <body className={mono.variable}>
-          <section className="min-h-screen">
-            <main>{children}</main>
-          </section>
+          <main className="min-h-screen">{children}</main>
           <Analytics />
         </body>
       </html>

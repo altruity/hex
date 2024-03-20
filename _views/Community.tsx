@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 
 import ErrorBoundary from '@/_components/ErrorBoundary';
+import CommandPalette from '@/_components/CommandMenu';
 import Container from '@/_components/Container';
 import Section from '@/_components/Section';
 import Hero from '@/_components/Hero';
@@ -63,6 +64,8 @@ const Community = ({ data }: PageTypes): JSX.Element => {
           </Box>
         )}
       </Box>
+
+      <CommandPalette />
     </ErrorBoundary>
   );
 };

@@ -10,3 +10,68 @@ body {
   font-family: var(--font-mono);
 }
 
+/* Command palette */
+[id*='headlessui-dialog-overlay'] {
+  background-color: rgba(1, 1, 27, 0.8);
+}
+
+[id*='headlessui-portal-root'] div.bg-midnight.rounded-md {
+  background-color: rgb(1, 1, 27);
+  border-radius: 0;
+  border-width: 0.5px;
+  border-color: #F5C0C0;
+  font-size: 16px;
+}
+
+[id*='headlessui-combobox-options'] {
+  padding: 8px 0;
+  border-top-width: 0.5px;
+  border-color: #F5C0C0;
+}
+
+[id*='headlessui-combobox-options'] li [class*='icon-size'] {
+  margin-right: 12px;
+  color: #F5C0C0;
+}
+
+[id*='headlessui-combobox-input']::placeholder {
+  color: #FFF;
+  font-family: var(--font-mono);
+  font-size: 15px;
+}
+
+[id*='headlessui-dialog'] > div:last-child {
+  position: relative;
+  padding: 12px;
+  border: 1px solid pink;
+  overflow: visible;
+  border-color: rgba(245, 192, 192, 0.3);
+  /* background-color: rgba(245, 192, 192, 0.1); */
+  background-color: #1b162b;
+  transition: border 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) 0s, background-color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+}
+[id*='headlessui-dialog'] > div:last-child:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 20px;
+  height: 1px;
+  background: rgba(245, 192, 192, 0.4);
+}
+[id*='headlessui-dialog'] > div:last-child:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 1px;
+  height: 20px;
+  background: rgba(245, 192, 192, 0.4);
+}
+
+[id*='headlessui-dialog'] > div:last-child:hover .flex.items-center.p-2.space-x-1.border-b.border-neutral-800.bg-midnight.text-white {
+  background-color: rgba(245, 192, 192, 0.1);
+}
+
